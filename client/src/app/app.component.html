@@ -1,0 +1,21 @@
+<div style="text-align:center">
+    <div style="background-color:deepskyblue" class="jumbotron">
+        <h1>Shorten URL Service</h1>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="input-group" style="float: none; margin: 1% auto;">
+        <input type="text" class="form-control" placeholder="Paste url here..." aria-label="url"
+               aria-describedby="basic-addon2" [(ngModel)]="url">
+        <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="button" (click)='shortenURL()'>
+                Shorten
+            </button>
+            <button class="btn btn-outline-secondary" type="button" (click)='redirectURL()'>
+                Redirect
+            </button>
+        </div>
+    </div>
+    <div [innerHTML]="response" id="response"></div>
+</div>
