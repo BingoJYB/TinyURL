@@ -1,0 +1,18 @@
+version: "2"
+services:
+  client:
+    image: bingojyb/tinyurl-client
+    ports:
+      - "4200:4200"
+
+  server:
+    image: bingojyb/tinyurl-server
+    ports:
+      - "3000:3000"
+    links:
+      - db
+
+  db:
+    image: mongo
+    ports:
+      - "27017:27017"
